@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  # Official Hindsight Agent Memory Service
+  hindsight:
+    image: ghcr.io/vectorize-io/hindsight:latest
+    container_name: supportmemory-hindsight
+    restart: unless-stopped
+    ports:
+      - "8888:8888" # Hindsight REST API
+      - "9999:9999" # Hindsight Web UI Dashboard
+    environment:
+      - HINDSIGHT_API_LLM_PROVIDER=${HINDSIGHT_API_LLM_PROVIDER:-openai}
+      - HINDSIGHT_API_LLM_API_KEY=${HINDSIGHT_API_LLM_API_KEY}
+    volumes:
+      - hindsight-data:/home/hindsight/.pg0
+
+volumes:
+  hindsight-data:

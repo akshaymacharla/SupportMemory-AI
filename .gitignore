@@ -1,0 +1,36 @@
+# Environment
+.env
+*.env.local
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Backend
+backend/target/
+backend/.gradle/
+backend/build/
+backend/*.jar
+backend/*.class
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Database & local data
+data/
+backend/data/
+*.h2.db
+hindsight-data/
+
