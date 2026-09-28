@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+    
+    <linearGradient id="reactGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.05" />
+    </linearGradient>
+
+    <linearGradient id="springGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#059669" stop-opacity="0.05" />
+    </linearGradient>
+
+    <linearGradient id="hindsightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#4f46e5" stop-opacity="0.05" />
+    </linearGradient>
+
+    <linearGradient id="groqGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#ea580c" stop-opacity="0.05" />
+    </linearGradient>
+
+    <!-- Drop Shadows -->
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#94a3b8" />
+    </marker>
+    <marker id="arrow-indigo" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#818cf8" />
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#34d399" />
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#fb923c" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="650" fill="url(#bgGrad)" rx="16" />
+  
+  <!-- Outer Border -->
+  <rect x="1" y="1" width="998" height="648" fill="none" stroke="#1f2937" stroke-width="1.5" rx="16" />
+
+  <!-- Title Banner -->
+  <g transform="translate(50, 40)">
+    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#f8fafc">
+      SupportMemory AI — Architecture Diagram
+    </text>
+    <text x="0" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, sans-serif" font-size="13" font-weight="400" fill="#94a3b8">
+      Persistent agent memory loop combining Hindsight long-term recall and Groq high-speed LLM generation
+    </text>
+  </g>
+
+  <!-- User / Customer Node -->
+  <g transform="translate(60, 150)" filter="url(#shadow)">
+    <rect width="180" height="90" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+    <circle cx="35" cy="45" r="18" fill="#3b82f6" fill-opacity="0.2" stroke="#60a5fa" stroke-width="1.5" />
+    <text x="35" y="50" font-family="sans-serif" font-size="16" text-anchor="middle" fill="#93c5fd">👤</text>
+    <text x="70" y="40" font-family="sans-serif" font-size="14" font-weight="600" fill="#f8fafc">Customer</text>
+    <text x="70" y="58" font-family="sans-serif" font-size="11" fill="#94a3b8">Browser Session</text>
+  </g>
+
+  <!-- Flow 1: User -> Frontend -->
+  <path d="M 240 195 L 300 195" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="270" y="185" font-family="sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Input</text>
+
+  <!-- Frontend Container: React + Vite + Tailwind -->
+  <g transform="translate(305, 120)" filter="url(#shadow)">
+    <rect width="210" height="150" rx="12" fill="url(#reactGrad)" stroke="#0284c7" stroke-width="1.5" />
+    <text x="20" y="32" font-family="sans-serif" font-size="14" font-weight="700" fill="#38bdf8">⚛️ React Frontend</text>
+    <text x="20" y="50" font-family="sans-serif" font-size="11" fill="#7dd3fc">Vite + Tailwind CSS (SPA)</text>
+    <line x1="20" y1="62" x2="190" y2="62" stroke="#0369a1" stroke-width="1" />
+    <text x="20" y="82" font-family="sans-serif" font-size="11" fill="#94a3b8">• Interactive Support Chat</text>
+    <text x="20" y="100" font-family="sans-serif" font-size="11" fill="#94a3b8">• Real-time Memory Inspector</text>
+    <text x="20" y="118" font-family="sans-serif" font-size="11" fill="#94a3b8">• Learning Timeline &amp; Demo</text>
+    <text x="20" y="136" font-family="sans-serif" font-size="11" fill="#94a3b8">• Customer Context Panel</text>
+  </g>
+
+  <!-- Flow 2: Frontend -> Backend -->
+  <path d="M 515 195 L 575 195" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="545" y="185" font-family="sans-serif" font-size="10" fill="#64748b" text-anchor="middle">REST API</text>
+
+  <!-- Backend Container: Spring Boot -->
+  <g transform="translate(580, 110)" filter="url(#shadow)">
+    <rect width="360" height="170" rx="12" fill="url(#springGrad)" stroke="#10b981" stroke-width="1.5" />
+    <text x="20" y="32" font-family="sans-serif" font-size="14" font-weight="700" fill="#34d399">🍃 Spring Boot Backend</text>
+    <text x="20" y="50" font-family="sans-serif" font-size="11" fill="#6ee7b7">Java 24 • REST Services Orchestrator</text>
+    <line x1="20" y1="62" x2="340" y2="62" stroke="#047857" stroke-width="1" />
+    <text x="20" y="82" font-family="sans-serif" font-size="11" fill="#94a3b8">• ChatController (/api/chat, /api/customers)</text>
+    <text x="20" y="100" font-family="sans-serif" font-size="11" fill="#94a3b8">• DemoController (/api/demo/reset with clean bank isolation)</text>
+    <text x="20" y="118" font-family="sans-serif" font-size="11" fill="#94a3b8">• HindsightService (Recall &amp; Retain pipeline)</text>
+    <text x="20" y="136" font-family="sans-serif" font-size="11" fill="#94a3b8">• GroqService (Llama-3.3-70B context injection)</text>
+    <text x="20" y="154" font-family="sans-serif" font-size="11" fill="#94a3b8">• Local Memory Fallback Engine &amp; Health Checks</text>
+  </g>
+
+  <!-- Downward Flow from Backend to Memory & LLM -->
+  <!-- 1. Backend to Hindsight (Recall) -->
+  <path d="M 670 280 L 670 340 L 480 340 L 480 395" fill="none" stroke="#818cf8" stroke-width="2" marker-end="url(#arrow-indigo)" />
+  <text x="560" y="332" font-family="sans-serif" font-size="11" font-weight="600" fill="#a5b4fc" text-anchor="middle">Step 1: Recall Query (/v1/banks/{id}/recall)</text>
+
+  <!-- Hindsight Engine Box -->
+  <g transform="translate(180, 400)" filter="url(#shadow)">
+    <rect width="320" height="190" rx="12" fill="url(#hindsightGrad)" stroke="#6366f1" stroke-width="1.5" />
+    <text x="20" y="32" font-family="sans-serif" font-size="14" font-weight="700" fill="#a5b4fc">🧠 Hindsight Long-Term Memory</text>
+    <text x="20" y="50" font-family="sans-serif" font-size="11" fill="#c7d2fe">Autonomous Context &amp; Knowledge Graph Engine</text>
+    <line x1="20" y1="62" x2="300" y2="62" stroke="#4338ca" stroke-width="1" />
+    <text x="20" y="84" font-family="sans-serif" font-size="11" fill="#e0e7ff" font-weight="600">World Memories:</text>
+    <text x="30" y="102" font-family="sans-serif" font-size="11" fill="#94a3b8">• Pro Plan, 20 team seats, Google Workspace</text>
+    <text x="30" y="120" font-family="sans-serif" font-size="11" fill="#94a3b8">• OAuth permissions identified as root cause</text>
+    <text x="20" y="142" font-family="sans-serif" font-size="11" fill="#e0e7ff" font-weight="600">Experience Memories:</text>
+    <text x="30" y="160" font-family="sans-serif" font-size="11" fill="#94a3b8">• Previously reported calendar sync failure</text>
+    <text x="30" y="178" font-family="sans-serif" font-size="11" fill="#94a3b8">• Reauthorization resolved sync issue</text>
+  </g>
+
+  <!-- Flow: Hindsight to Groq via Context Injection -->
+  <path d="M 500 480 L 590 480" fill="none" stroke="#818cf8" stroke-width="2" marker-end="url(#arrow-indigo)" stroke-dasharray="4,4" />
+  <text x="545" y="470" font-family="sans-serif" font-size="10" fill="#c7d2fe" text-anchor="middle">Recalled Context</text>
+
+  <!-- Groq Box -->
+  <g transform="translate(595, 400)" filter="url(#shadow)">
+    <rect width="345" height="190" rx="12" fill="url(#groqGrad)" stroke="#f97316" stroke-width="1.5" />
+    <text x="20" y="32" font-family="sans-serif" font-size="14" font-weight="700" fill="#fdba74">⚡ Groq LLM Inference</text>
+    <text x="20" y="50" font-family="sans-serif" font-size="11" fill="#fed7aa">llama-3.3-70b-versatile • Sub-second Response</text>
+    <line x1="20" y1="62" x2="325" y2="62" stroke="#9a3412" stroke-width="1" />
+    <text x="20" y="84" font-family="sans-serif" font-size="11" fill="#ffedd5" font-weight="600">Context-Augmented System Prompt:</text>
+    <text x="20" y="104" font-family="sans-serif" font-size="10" fill="#cbd5e1" font-family="monospace">&lt;recalled_memories&gt;</text>
+    <text x="20" y="122" font-family="sans-serif" font-size="10" fill="#cbd5e1" font-family="monospace">  - Customer works at Acme Technologies</text>
+    <text x="20" y="140" font-family="sans-serif" font-size="10" fill="#cbd5e1" font-family="monospace">  - Google Calendar issue was OAuth scoped</text>
+    <text x="20" y="158" font-family="sans-serif" font-size="10" fill="#cbd5e1" font-family="monospace">&lt;/recalled_memories&gt;</text>
+    <text x="20" y="178" font-family="sans-serif" font-size="11" fill="#fed7aa">Generates zero-repetition targeted solution</text>
+  </g>
+
+  <!-- Flow: Groq back up to Spring Boot -->
+  <path d="M 800 400 L 800 285" fill="none" stroke="#fb923c" stroke-width="2" marker-end="url(#arrow-orange)" />
+  <text x="830" y="340" font-family="sans-serif" font-size="10" fill="#fdba74">Targeted Answer</text>
+
+  <!-- Flow: Spring Boot to Hindsight Retain -->
+  <path d="M 620 280 L 620 370 L 350 370 L 350 395" fill="none" stroke="#34d399" stroke-width="2" marker-end="url(#arrow-green)" />
+  <text x="430" y="365" font-family="sans-serif" font-size="10" font-weight="600" fill="#6ee7b7" text-anchor="middle">Step 2: Retain Interaction (/v1/banks/{id}/retain)</text>
+
+  <!-- Return Flow: Spring Boot to React to User -->
+  <path d="M 580 230 L 515 230" fill="none" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arrow)" stroke-dasharray="3,3" />
+  <path d="M 305 230 L 240 230" fill="none" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arrow)" stroke-dasharray="3,3" />
+  <text x="270" y="244" font-family="sans-serif" font-size="10" fill="#38bdf8" text-anchor="middle">Fast Response</text>
+
+</svg>

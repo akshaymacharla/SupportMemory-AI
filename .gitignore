@@ -1,36 +1,48 @@
-# Environment
+# Environment variables
 .env
-*.env.local
+.env.*
+!.env.example
 
-# Frontend
+# Dependencies & Build Artifacts
+node_modules/
 frontend/node_modules/
+dist/
 frontend/dist/
 frontend/.vite/
-
-# Backend
-backend/target/
-backend/.gradle/
+build/
 backend/build/
-backend/*.jar
-backend/*.class
+backend/.gradle/
+backend/target/
+target/
+*.jar
+*.war
+*.class
 
-# IDE
+# Database & Persistent storage
+data/
+backend/data/
+*.h2.db
+*.mv.db
+*.lock.db
+hindsight-data/
+
+# IDE & Editor files
 .idea/
 *.iml
 .vscode/
 *.swp
 *.swo
+.project
+.classpath
+.settings/
 
-# OS
+# OS-specific files
 .DS_Store
 Thumbs.db
+ehthumbs.db
 
-# Logs
+# Logs & temporary files
 *.log
-
-# Database & local data
-data/
-backend/data/
-*.h2.db
-hindsight-data/
-
+logs/
+temp/
+tmp/
